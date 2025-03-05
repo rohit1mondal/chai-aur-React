@@ -27,6 +27,7 @@ export default function Header() {
               Get started
             </Link>
           </div>
+          
           <div
             className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
             id="mobile-menu-2"
@@ -44,6 +45,7 @@ export default function Header() {
                   Home
                 </NavLink>
               </li>
+
               <li>
                 <NavLink
                   to="/about"
@@ -56,6 +58,7 @@ export default function Header() {
                   About
                 </NavLink>
               </li>
+
               <li>
                 <NavLink
                   to="/contact"
@@ -68,6 +71,7 @@ export default function Header() {
                   Contact
                 </NavLink>
               </li>
+
               <li>
                 <NavLink
                   to="/github"
