@@ -5,20 +5,20 @@ import ThemeBtn from "./components/ThemeBtn";
 import Card from "./components/Card";
 
 function App() {
-  const [themeMode, setThemeMode] = useState("Light");
+  const [themeMode, setThemeMode] = useState("light");
 
-  const LightTheme = () => {
-    setThemeMode("Light");
+  const lightTheme = () => {
+    setThemeMode("light");
   };
 
-  const darktTheme = () => {
+  const darkTheme = () => {
     setThemeMode("dark");
   };
 
   // theme change
 
   useEffect(() => {
-    document.querySelector("html").classList.remove("Light", "dark");
+    document.querySelector("html").classList.remove("light", "dark");
     document.querySelector("html").classList.add(themeMode);
   }, [themeMode]);
 
