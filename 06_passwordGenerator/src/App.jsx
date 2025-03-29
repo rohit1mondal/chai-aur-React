@@ -19,19 +19,19 @@ function App() {
       let char = Math.floor(Math.random() * str.length + 1);
       pass += str.charAt(char);
     }
-
     setPassword(pass);
   }, [length, numberAllowed, charAllowed, setPassword]);
 
   const copyPasswordToClipboard = useCallback(() => {
     passwordRef.current?.select();
-    passwordRef.current?.setSelectionRange(0, 99);
+    passwordRef.current?.setSelectionRange(0, 20);
     window.navigator.clipboard.writeText(password);
   }, [password]);
 
   useEffect(() => {
     passwordGenerator();
   }, [length, numberAllowed, charAllowed, passwordGenerator]);
+  
   return (
     <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
       <h1 className="text-white text-center my-3">Password generator</h1>
@@ -56,7 +56,7 @@ function App() {
           <input
             type="range"
             min={6}
-            max={100}
+            max={30}
             value={length}
             className="cursor-pointer"
             onChange={(e) => {
